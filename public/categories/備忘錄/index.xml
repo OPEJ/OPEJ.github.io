@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>備忘錄 on My New Hugo Site</title>
+    <link>http://localhost:1313/categories/%E5%82%99%E5%BF%98%E9%8C%84/</link>
+    <description>Recent content in 備忘錄 on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Jan 2026 15:49:23 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E5%82%99%E5%BF%98%E9%8C%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test My Log</title>
+      <link>http://localhost:1313/log/test-my-log/</link>
+      <pubDate>Thu, 01 Jan 2026 15:49:23 +0800</pubDate>
+      <guid>http://localhost:1313/log/test-my-log/</guid>
+      <description>&lt;h3 id=&#34;-今日進度&#34;&gt;🛠 今日進度&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-筆記&#34;&gt;📝 筆記&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;/blockquote&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -9,7 +9,7 @@ theme = "hugo-bearblog"
 
 [[menu.main]]
     name = "N規模型"
-    url = "/n gauge/"
+    url = "/n-gauge/"
     weight = 20
 
 [[menu.main]]
@@ -18,7 +18,7 @@ theme = "hugo-bearblog"
     weight = 30
 
 [[menu.main]]
-    name = "關於作者"
+    name = "關於我"
     url = "/about/"
     weight = 40
 

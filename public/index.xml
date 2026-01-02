@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>N規與1/64收藏</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content on N規與1/64收藏</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Jan 2026 15:49:23 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 02 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test My Log</title>
-      <link>http://localhost:1313/log/test-my-log/</link>
-      <pubDate>Thu, 01 Jan 2026 15:49:23 +0800</pubDate>
-      <guid>http://localhost:1313/log/test-my-log/</guid>
-      <description>&lt;h3 id=&#34;-今日進度&#34;&gt;🛠 今日進度&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-筆記&#34;&gt;📝 筆記&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;/blockquote&gt;</description>
+      <title>N規收藏</title>
+      <link>http://localhost:1313/n-gauge/</link>
+      <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/n-gauge/</guid>
+      <description>&lt;h1 id=&#34;n規模型&#34;&gt;N規模型&lt;/h1&gt;&#xA;&lt;p&gt;這裡按照分類顯示收藏的N規模型。&lt;br&gt;&#xA;我會簡單介紹模型細節與心得。&lt;/p&gt;&#xA;&lt;style&gt;&#xD;&#xA;  header, .header, #header-wrapper { &#xD;&#xA;    display: none !important; &#xD;&#xA;  }&#xD;&#xA;&lt;/style&gt;</description>
     </item>
     <item>
       <title></title>
       <link>http://localhost:1313/cheat-sheet/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/cheat-sheet/</guid>
-      <description></description>
+      <description>&lt;h1 id=&#34;這是-h1-標題&#34;&gt;這是 H1 標題&lt;/h1&gt;&#xA;&lt;h2 id=&#34;這是-h2-標題&#34;&gt;這是 H2 標題&lt;/h2&gt;&#xA;&lt;h3 id=&#34;h3&#34;&gt;H3&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;這是粗體&lt;/strong&gt;&#xA;&lt;em&gt;這是斜體&lt;/em&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;清單項目 A&lt;/li&gt;&#xA;&lt;li&gt;清單項目 B&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;有數字的清單&lt;/li&gt;&#xA;&lt;li&gt;第二點&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.google.com&#34;&gt;這是顯示的連結文字&lt;/a&gt;&#xA;&lt;img src=&#34;http://localhost:1313/path/to/image.jpg&#34; alt=&#34;圖片描述&#34;&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;這是區塊引用&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Ctrl + / 會註解&lt;/p&gt;&#xA;&lt;p&gt;新段落&#x9;連按兩次 Enter&#xA;強制換行&#x9;行末「兩個空格」+ Enter&#xA;大間隔換行&#x9;使用 &lt;br&gt; 或多個空行&lt;/p&gt;&#xA;&lt;p&gt;./hugo server -D 顯示預覽網頁指令&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/log/site-build/</link>
+      <link>http://localhost:1313/log/site-build_2026/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/log/site-build/</guid>
-      <description></description>
+      <guid>http://localhost:1313/log/site-build_2026/</guid>
+      <description>&lt;h2 id=&#34;2026-01-01&#34;&gt;2026-01-01&lt;/h2&gt;&#xA;&lt;p&gt;新年第一天 測試日誌&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

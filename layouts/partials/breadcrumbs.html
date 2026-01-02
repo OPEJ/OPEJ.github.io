@@ -1,0 +1,22 @@
+<nav class="breadcrumbs" style="font-size: 0.85rem; color: #888; margin-bottom: 1.5rem;">
+  <a href="/" style="color: #555; text-decoration: none;">首頁</a>
+  
+  {{ $url := "" }}
+  {{ range (split .RelPermalink "/") }}
+    {{ if and (ne . "") (ne . "index.html") }}
+      {{ $url = printf "%s/%s" $url . }}
+      <span style="margin: 0 5px; color: #ccc;">/</span>
+      
+      {{/* 嘗試尋找該路徑對應的頁面對象 */}}
+      {{ $page := $.Site.GetPage $url }}
+      
+      {{ if $page }}
+        {{/* 如果找到了頁面，顯示該頁面的 Title */}}
+        <a href="{{ $page.Permalink }}" style="color: #555; text-decoration: none;">{{ $page.Title }}</a>
+      {{ else }}
+        {{/* 如果找不到（通常是路徑層級），回退到資料夾名稱 */}}
+        <a href="{{ . | relURL }}" style="color: #555; text-decoration: none;">{{ . | humanize }}</a>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+</nav>

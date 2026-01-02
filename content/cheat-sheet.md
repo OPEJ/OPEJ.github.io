@@ -15,3 +15,11 @@
 ![圖片描述](/path/to/image.jpg)
 
 > 這是區塊引用
+
+Ctrl + / 會註解
+
+新段落	連按兩次 Enter
+強制換行	行末「兩個空格」+ Enter
+大間隔換行	使用 <br> 或多個空行
+
+./hugo server -D 顯示預覽網頁指令

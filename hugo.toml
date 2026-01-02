@@ -1,4 +1,34 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'N規與1/64收藏'
 theme = "hugo-bearblog"
+[[menu.main]]
+    name = "備忘錄"     # 網頁上顯示的文字
+    url = "/log/"      # 指向 content/log.md 或 content/log/ 資料夾
+    weight = 10     # 數字越小排越前面，這是註解
+
+[[menu.main]]
+    name = "N規模型"
+    url = "/n gauge/"
+    weight = 20
+
+[[menu.main]]
+    name = "64比例"
+    url = "/64scale/"
+    weight = 30
+
+[[menu.main]]
+    name = "關於作者"
+    url = "/about/"
+    weight = 40
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[taxonomies]                 # 分類語法
+  category = "categories"    # 保持內建
+  tag      = "tags"          # 保持內建
+  brand    = "brands"        # 自定義：品牌
+  scale    = "scales"        # 自定義：比例

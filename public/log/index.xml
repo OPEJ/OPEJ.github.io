@@ -1,26 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Logs on My New Hugo Site</title>
+    <title>Logs on N規與1/64收藏</title>
     <link>http://localhost:1313/log/</link>
-    <description>Recent content in Logs on My New Hugo Site</description>
+    <description>Recent content in Logs on N規與1/64收藏</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Jan 2026 15:49:23 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/log/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test My Log</title>
-      <link>http://localhost:1313/log/test-my-log/</link>
-      <pubDate>Thu, 01 Jan 2026 15:49:23 +0800</pubDate>
-      <guid>http://localhost:1313/log/test-my-log/</guid>
-      <description>&lt;h3 id=&#34;-今日進度&#34;&gt;🛠 今日進度&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-筆記&#34;&gt;📝 筆記&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;/blockquote&gt;</description>
-    </item>
-    <item>
       <title></title>
-      <link>http://localhost:1313/log/site-build/</link>
+      <link>http://localhost:1313/log/site-build_2026/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/log/site-build/</guid>
-      <description></description>
+      <guid>http://localhost:1313/log/site-build_2026/</guid>
+      <description>&lt;h2 id=&#34;2026-01-01&#34;&gt;2026-01-01&lt;/h2&gt;&#xA;&lt;p&gt;新年第一天 測試日誌&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

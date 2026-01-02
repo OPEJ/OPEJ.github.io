@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = "https://opej.github.io/"
 languageCode = 'en-us'
 title = 'N規與1/64收藏'
 theme = "hugo-bearblog"

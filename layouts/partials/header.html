@@ -1,0 +1,20 @@
+<a href="{{ "" | relURL }}" class="title" style="text-decoration: none; display: block; text-align: left;">
+  <h2 style="margin-bottom: 0;">{{ .Site.Title }}</h2>
+  
+  {{ if .IsHome }}
+    <div style="font-size: 0.8rem; color: #888; margin-top: 2px;">
+      {{ $latest := index .Site.RegularPages 0 }}
+      {{ if $latest }}
+        全站最後更新：{{ $latest.Lastmod.Format "2006-01-02" }}
+      {{ end }}
+    </div>
+  {{ else if .IsPage }}
+    <div style="font-size: 0.8rem; color: #999; margin-top: 2px;">
+      📅 本篇更新：{{ .Lastmod.Format "2006-01-02" }}
+    </div>
+  {{ end }}
+</a>
+
+<nav style="text-align: left; margin-top: 10px;">
+  {{- partial "nav.html" . -}}
+</nav>

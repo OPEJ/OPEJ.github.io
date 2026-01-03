@@ -32,3 +32,6 @@ theme = "hugo-bearblog"
   tag      = "tags"          # 保持內建
   brand    = "brands"        # 自定義：品牌
   scale    = "scales"        # 自定義：比例
+
+  [frontmatter]
+  lastmod = ["lastmod", ":fileModTime", "publishDate", "date"]

@@ -1,30 +1,39 @@
 {{ define "main" }}
-<content> {{ partial "breadcrumbs.html" . }}
-{{ partial "breadcrumbs.html" . }}
+<content>
+  {{ partial "breadcrumbs.html" . }}
+  
+  {{/* 1. 新增：顯示你在 MD 檔案裡寫的內容（這能讓你的分類按鈕出來） */}}
+  <div class="page-content">
+    {{ .Content }}
+  </div>
+
   {{ if .Data.Singular }}
-  <h3 style="margin-bottom:0">Filtering for "{{ .Title }}"</h3>
-  <small>
-    <a href="{{ "blog" | relURL }}">Remove filter</a>
-  </small>
+    <h3 style="margin-bottom:0">Filtering for "{{ .Title }}"</h3>
+    <small>
+      <a href="{{ "blog" | relURL }}">Remove filter</a>
+    </small>
   {{ end }}
-  <ul class="blog-posts">
-    {{ range .Pages }}
-    <li>
-      <span>
-        <i>
-          <time datetime='{{ .Date.Format "2006-01-02" }}'>
-            {{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}
-          </time>
-        </i>
-      </span>
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
-    </li>
-    {{ else }}
-    <li>
-      No posts yet
-    </li>
-    {{ end }}
-  </ul>
+
+  {{/* 2. 修改：只有在「非 n-gauge」頁面或是真的有文章時才顯示列表 */}}
+  {{ if ne .Section "n-gauge" }}
+    <ul class="blog-posts">
+      {{ range .Pages }}
+      <li>
+        <span>
+          <i>
+            <time datetime='{{ .Date.Format "2006-01-02" }}'>
+              {{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}
+            </time>
+          </i>
+        </span>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
+      {{ else }}
+      <li>No posts yet</li>
+      {{ end }}
+    </ul>
+  {{ end }}
+
   {{ if not .Data.Singular }}
   <small>
     <div>

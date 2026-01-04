@@ -1,0 +1,198 @@
+{{/* ====================================================================== */}}
+{{/* PART 1: 資料讀取與處理 (保持不變)                                       */}}
+{{/* ====================================================================== */}}
+
+{{ $file := resources.Get "data/n_collection.csv" }}
+{{ $csv := $file | transform.Unmarshal (dict "delimiter" "," "lazyQuotes" true) }}
+
+{{ $targetType := .Get "type" }}
+{{ $targetBrand := .Get "brand" }}
+
+{{ $data := slice }}
+
+{{ range $index, $row := $csv }}
+  {{ if gt $index 0 }}
+    {{ if gt (len $row) 7 }}
+      {{ $brand := trim (index $row 1) " \n\r\t" }} 
+      {{ $type  := trim (index $row 3) " \n\r\t" }}
+      {{ $matchType := or (not $targetType) (eq $type $targetType) }}
+      {{ $matchBrand := or (not $targetBrand) (in $brand $targetBrand) }}
+
+      {{ if and $matchType $matchBrand }}
+        {{ $sub := "" }}{{ $note := "" }}
+        {{ if gt (len $row) 8 }}{{ $sub = index $row 8 }}{{ end }}
+        {{ if gt (len $row) 9 }}{{ $note = index $row 9 }}{{ end }}
+
+        {{ $item := dict 
+          "scale" (index $row 0)
+          "brand" $brand
+          "id"    (index $row 2)
+          "type"  $type
+          "image" (index $row 5)
+          "name"  (index $row 7)
+          "sub"   $sub
+          "note"  $note
+        }}
+        {{ $data = $data | append $item }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $sortedData := sort $data "brand" "asc" }}
+
+
+{{/* ====================================================================== */}}
+{{/* PART 2: CSS 樣式 (超長圖全幅版)                                       */}}
+{{/* ====================================================================== */}}
+<style>
+  /* 全寬度包裝 */
+  .collection-wrapper { width: 100%; max-width: 1200px; margin: 0 auto; }
+
+  .brand-nav { 
+    position: sticky; top: 70px; z-index: 100;
+    background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(5px);
+    padding: 10px; margin-bottom: 25px; border-bottom: 1px solid #ddd;
+    display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+  }
+  .nav-btn { 
+    text-decoration: none; color: #444; background: #f0f2f5; 
+    padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: bold;
+  }
+
+  .brand-group-title { 
+    background: #2c3e50; color: #fff; padding: 12px 25px; 
+    margin: 40px 0 20px; border-radius: 6px; border-left: 8px solid #f39c12; 
+    font-size: 1.5rem;
+  }
+
+  /* 列車容器：改為垂直堆疊 */
+  .train-container { display: flex; flex-direction: column; gap: 40px; }
+
+  .train-card { 
+    display: flex;
+    flex-direction: column; /* 強制上下排列 */
+    border: 1px solid #e1e8ed; background: #fff; 
+    border-radius: 12px; overflow: hidden; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  /* 圖片區域：設定為超長寬度 */
+  .train-img { 
+    width: 100%; 
+    max-width: 1000px; /* 依照你的需求，長度至少 1000px */
+    margin: 0 auto; /* 置中 */
+    background: #fdfdfd; 
+    display: flex; align-items: center; justify-content: center;
+    border-bottom: 1px solid #eee; /* 改為底部邊框 */
+  }
+  
+  .train-img img { 
+    width: 100%;
+    height: auto; /* 保持原始比例 */
+    object-fit: contain; 
+    padding: 20px; /* 留白讓火車更顯精緻 */
+    transition: transform 0.3s;
+  }
+  .train-card:hover img { transform: scale(1.02); } /* 懸停時輕微放大 */
+
+  /* 資訊區域：移至圖片下方 */
+  .train-info { padding: 25px 30px; background: #fff; }
+  
+  .train-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; }
+  .train-title-area { flex: 1; }
+  .train-title { font-weight: 800; font-size: 1.5rem; color: #2c3e50; margin-bottom: 5px; }
+  .train-sub { font-size: 1.1rem; color: #d35400; font-weight: 600; }
+  
+  .train-meta { font-size: 0.9rem; color: #666; display: flex; flex-wrap: wrap; gap: 20px; margin: 15px 0; }
+  .label { background: #34495e; padding: 2px 8px; border-radius: 4px; color: #fff; margin-right: 6px; font-weight: 500; }
+  
+  .train-note { 
+    font-size: 0.95rem; color: #555; 
+    border-top: 2px solid #f8f9fa; 
+    padding-top: 15px; margin-top: 10px;
+    line-height: 1.6;
+    background: #fcfcfc;
+    padding: 15px;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .train-img a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: zoom-in; /* 滑鼠變成放大鏡圖示 */
+}
+
+.train-img img:hover {
+  opacity: 0.9; /* 稍微變暗，提示這是可以點擊的 */
+  transform: scale(1.01); /* 輕微放大 */
+  transition: 0.3s ease;
+}
+</style>
+
+{{/* ====================================================================== */}}
+{{/* PART 3: HTML 渲染 (上下佈局)                                           */}}
+{{/* ====================================================================== */}}
+
+<div class="collection-wrapper">
+  
+  {{ if gt (len $data) 10 }} 
+    <nav class="brand-nav">
+      {{ $lastBrand := "" }}
+      {{ range $sortedData }}
+        {{ if ne .brand $lastBrand }}
+          <a href="#brand-{{ .brand | md5 }}" class="nav-btn">{{ .brand }}</a>
+          {{ $lastBrand = .brand }}
+        {{ end }}
+      {{ end }}
+    </nav>
+  {{ end }}
+
+  {{ $currentBrand := "" }}
+  {{ range $sortedData }}
+    
+    {{ if ne .brand $currentBrand }}
+      {{ if ne $currentBrand "" }} </div> {{ end }} 
+      <h2 id="brand-{{ .brand | md5 }}" class="brand-group-title">{{ .brand }}</h2>
+      <div class="train-container"> 
+      {{ $currentBrand = .brand }}
+    {{ end }}
+
+    <div class="train-card">
+      <div class="train-img">
+        {{ if .image }}
+         {{/* target="_blank" 代表開新分頁，title 提示使用者可以點擊 */}}
+         <a href="/images/{{ .image }}" target="_blank" title="點擊查看完整大圖">
+            <img src="/images/{{ .image }}" alt="{{ .name }}" loading="lazy">
+         </a>
+         {{ else }}
+            <div style="height:200px; display:flex; align-items:center; color:#ccc;">NO IMAGE</div>
+         {{ end }}  
+      </div>
+
+      <div class="train-info">
+        <div class="train-header">
+          <div class="train-title-area">
+            <div class="train-title">{{ .name }}</div>
+            {{ if .sub }}<div class="train-sub">{{ .sub }}</div>{{ end }}
+          </div>
+        </div>
+        
+        <div class="train-meta">
+          <div><span class="label">產品編號</span><strong>{{ .id }}</strong></div>
+          <div><span class="label">模型比例</span><strong>{{ .scale }}</strong></div>
+          <div><span class="label">車輛類型</span><strong>{{ .type }}</strong></div>
+        </div>
+
+        {{ if .note }}
+          <div class="train-note">
+            <strong>📋 收藏備註：</strong><br>
+            {{ .note }}
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+  </div> 
+</div>  

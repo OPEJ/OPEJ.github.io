@@ -8,6 +8,10 @@ draft: false          # 記得檢查這裡是不是 false
 這裡會顯示關於1/64模型的收藏。  
 同時我也會簡單紀錄種耐力賽的消息。
 
+## 模型車介紹
+
+  
+
 <style>
   header, .header, #header-wrapper { 
     display: none !important; 

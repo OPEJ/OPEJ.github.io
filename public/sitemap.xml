@@ -2,11 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/n-gauge/brands/kato/</loc>
+    <lastmod>2026-01-04T18:18:23+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/n-gauge/brands/tomix/</loc>
+    <lastmod>2026-01-04T18:23:38+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/n-gauge/brands/sanying/</loc>
+    <lastmod>2026-01-04T18:51:57+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/n-gauge/types/passenger-cars/</loc>
+    <lastmod>2026-01-04T17:50:44+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/n-gauge/n-collection/</loc>
+    <lastmod>2026-01-04T19:35:35+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/n-gauge/types/steam-locomotives/</loc>
+    <lastmod>2026-01-04T17:43:10+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/n-gauge/types/freight-cars/</loc>
+    <lastmod>2026-01-04T17:51:55+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/n-gauge/types/electric-locomotives/</loc>
+    <lastmod>2026-01-04T17:50:52+08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/64scale/</loc>
-    <lastmod>2026-01-02T20:23:06+08:00</lastmod>
+    <lastmod>2026-01-04T16:30:42+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/n-gauge/</loc>
-    <lastmod>2026-01-02T18:44:55+08:00</lastmod>
+    <lastmod>2026-01-04T19:38:39+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/log/</loc>
     <lastmod>2026-01-03T18:44:37+08:00</lastmod>
@@ -18,7 +42,7 @@
     <lastmod>2026-01-02T20:36:59+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/cheat-sheet/</loc>
-    <lastmod>2026-01-03T18:26:22+08:00</lastmod>
+    <lastmod>2026-01-04T16:41:58+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/brands/</loc>
   </url><url>
@@ -27,5 +51,11 @@
     <loc>http://localhost:1313/scales/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/n-gauge/brands/</loc>
+    <lastmod>2026-01-04T18:35:23+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/n-gauge/types/</loc>
+    <lastmod>2026-01-04T18:33:36+08:00</lastmod>
   </url>
 </urlset>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>N規與1/64收藏</title>
+<meta name="title" content="N規與1/64收藏" />
+<meta name="description" content="圖片管理規範 (Image Management)
+為了保持專案結構整潔並方便維護，請遵循以下圖片存放規則：
+1. 文章專用圖片 (Page Bundles) - 最推薦
+針對特定車輛或文章的圖片，請將其與 .md 檔案放在同一個資料夾中。
+
+
+路徑範例：content/n-gauge/brands/kato/ef210/
+
+
+結構：
+
+
+index.md (文章主體)
+
+
+ef210-side.jpg (該文章專用圖)
+
+
+優點：刪除文章時，圖片會一併移除，不會產生孤兒檔案。
+
+
+2. 全站通用資源 (Global Assets)
+如果是首頁按鈕背景、Logo 或多個頁面共用的裝飾圖，請存放在 static 目錄。
+
+
+路徑範例：static/images/ui/
+
+
+結構：
+
+
+comparison-hero.jpg (首頁大按鈕背景)
+
+
+引用路徑：在 CSS 或 HTML 中直接使用 /images/ui/xxx.jpg。
+
+
+3. 命名原則 (Naming Convention)
+
+全小寫：避免大小寫造成的讀取錯誤（例如：使用 kato-ef210.jpg 而非 Kato_EF210.JPG）。
+無空格：單字間以連字號 - 隔開。
+有意義的描述：依照 品牌-型號-視角.jpg 命名，方便未來搜尋。
+
+型式分頁管理規範
+🛠️ 1. 建議的目錄結構
+將 comparison 變成一個大類別，裡面按「型號」分資料夾：
+content/
+└── comparison/
+├── _index.md             (型式專欄首頁，顯示所有型號列表)
+└── ef210/                (EF210 型號專區)
+├── _index.md         (設定標題為 &ldquo;EF210 專欄&rdquo;)
+├── kato-ef210.md     (KATO 版評測)
+├── tomix-ef210.md    (TOMIX 版評測)
+└── sanying-ef210.md  (三鶯重工版評測)" />
+<meta name="keywords" content="" />
+
+
+<meta property="og:url" content="http://localhost:1313/readme/">
+  <meta property="og:site_name" content="N規與1/64收藏">
+  <meta property="og:title" content="N規與1/64收藏">
+  <meta property="og:description" content="圖片管理規範 (Image Management) 為了保持專案結構整潔並方便維護，請遵循以下圖片存放規則：
+1. 文章專用圖片 (Page Bundles) - 最推薦 針對特定車輛或文章的圖片，請將其與 .md 檔案放在同一個資料夾中。
+路徑範例：content/n-gauge/brands/kato/ef210/
+結構：
+index.md (文章主體)
+ef210-side.jpg (該文章專用圖)
+優點：刪除文章時，圖片會一併移除，不會產生孤兒檔案。
+2. 全站通用資源 (Global Assets) 如果是首頁按鈕背景、Logo 或多個頁面共用的裝飾圖，請存放在 static 目錄。
+路徑範例：static/images/ui/
+結構：
+comparison-hero.jpg (首頁大按鈕背景)
+引用路徑：在 CSS 或 HTML 中直接使用 /images/ui/xxx.jpg。
+3. 命名原則 (Naming Convention) 全小寫：避免大小寫造成的讀取錯誤（例如：使用 kato-ef210.jpg 而非 Kato_EF210.JPG）。 無空格：單字間以連字號 - 隔開。 有意義的描述：依照 品牌-型號-視角.jpg 命名，方便未來搜尋。 型式分頁管理規範 🛠️ 1. 建議的目錄結構 將 comparison 變成一個大類別，裡面按「型號」分資料夾：
+content/ └── comparison/ ├── _index.md (型式專欄首頁，顯示所有型號列表) └── ef210/ (EF210 型號專區) ├── _index.md (設定標題為 “EF210 專欄”) ├── kato-ef210.md (KATO 版評測) ├── tomix-ef210.md (TOMIX 版評測) └── sanying-ef210.md (三鶯重工版評測)">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:modified_time" content="2026-01-06T11:31:34+08:00">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="N規與1/64收藏">
+  <meta name="twitter:description" content="圖片管理規範 (Image Management) 為了保持專案結構整潔並方便維護，請遵循以下圖片存放規則：
+1. 文章專用圖片 (Page Bundles) - 最推薦 針對特定車輛或文章的圖片，請將其與 .md 檔案放在同一個資料夾中。
+路徑範例：content/n-gauge/brands/kato/ef210/
+結構：
+index.md (文章主體)
+ef210-side.jpg (該文章專用圖)
+優點：刪除文章時，圖片會一併移除，不會產生孤兒檔案。
+2. 全站通用資源 (Global Assets) 如果是首頁按鈕背景、Logo 或多個頁面共用的裝飾圖，請存放在 static 目錄。
+路徑範例：static/images/ui/
+結構：
+comparison-hero.jpg (首頁大按鈕背景)
+引用路徑：在 CSS 或 HTML 中直接使用 /images/ui/xxx.jpg。
+3. 命名原則 (Naming Convention) 全小寫：避免大小寫造成的讀取錯誤（例如：使用 kato-ef210.jpg 而非 Kato_EF210.JPG）。 無空格：單字間以連字號 - 隔開。 有意義的描述：依照 品牌-型號-視角.jpg 命名，方便未來搜尋。 型式分頁管理規範 🛠️ 1. 建議的目錄結構 將 comparison 變成一個大類別，裡面按「型號」分資料夾：
+content/ └── comparison/ ├── _index.md (型式專欄首頁，顯示所有型號列表) └── ef210/ (EF210 型號專區) ├── _index.md (設定標題為 “EF210 專欄”) ├── kato-ef210.md (KATO 版評測) ├── tomix-ef210.md (TOMIX 版評測) └── sanying-ef210.md (三鶯重工版評測)">
+
+
+
+
+  <meta itemprop="name" content="N規與1/64收藏">
+  <meta itemprop="description" content="圖片管理規範 (Image Management) 為了保持專案結構整潔並方便維護，請遵循以下圖片存放規則：
+1. 文章專用圖片 (Page Bundles) - 最推薦 針對特定車輛或文章的圖片，請將其與 .md 檔案放在同一個資料夾中。
+路徑範例：content/n-gauge/brands/kato/ef210/
+結構：
+index.md (文章主體)
+ef210-side.jpg (該文章專用圖)
+優點：刪除文章時，圖片會一併移除，不會產生孤兒檔案。
+2. 全站通用資源 (Global Assets) 如果是首頁按鈕背景、Logo 或多個頁面共用的裝飾圖，請存放在 static 目錄。
+路徑範例：static/images/ui/
+結構：
+comparison-hero.jpg (首頁大按鈕背景)
+引用路徑：在 CSS 或 HTML 中直接使用 /images/ui/xxx.jpg。
+3. 命名原則 (Naming Convention) 全小寫：避免大小寫造成的讀取錯誤（例如：使用 kato-ef210.jpg 而非 Kato_EF210.JPG）。 無空格：單字間以連字號 - 隔開。 有意義的描述：依照 品牌-型號-視角.jpg 命名，方便未來搜尋。 型式分頁管理規範 🛠️ 1. 建議的目錄結構 將 comparison 變成一個大類別，裡面按「型號」分資料夾：
+content/ └── comparison/ ├── _index.md (型式專欄首頁，顯示所有型號列表) └── ef210/ (EF210 型號專區) ├── _index.md (設定標題為 “EF210 專欄”) ├── kato-ef210.md (KATO 版評測) ├── tomix-ef210.md (TOMIX 版評測) └── sanying-ef210.md (三鶯重工版評測)">
+  <meta itemprop="dateModified" content="2026-01-06T11:31:34+08:00">
+  <meta itemprop="wordCount" content="85">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+
+</head>
+
+<body>
+  
+    
+    <style>
+      header, .header, #header-wrapper { display: none !important; }
+    </style>
+  
+
+  
+  <main style="min-height: 70vh;">
+<nav class="breadcrumbs" style="font-size: 0.85rem; color: #888; margin-bottom: 1.5rem;">
+  <a href="/" style="color: #555; text-decoration: none;">首頁</a>
+  
+  
+  
+    
+  
+    
+      
+      <span style="margin: 0 5px; color: #ccc;">/</span>
+      
+      
+      
+      
+      
+        
+        <a href="http://localhost:1313/readme/" style="color: #555; text-decoration: none;"></a>
+      
+    
+  
+    
+  
+</nav>
+
+
+<content>
+  <h3 id="圖片管理規範-image-management">圖片管理規範 (Image Management)</h3>
+<p>為了保持專案結構整潔並方便維護，請遵循以下圖片存放規則：</p>
+<h4 id="1-文章專用圖片-page-bundles---最推薦">1. 文章專用圖片 (Page Bundles) - <strong>最推薦</strong></h4>
+<p>針對特定車輛或文章的圖片，請將其與 <code>.md</code> 檔案放在同一個資料夾中。</p>
+<ul>
+<li>
+<p><strong>路徑範例</strong>：<code>content/n-gauge/brands/kato/ef210/</code></p>
+</li>
+<li>
+<p><strong>結構</strong>：</p>
+</li>
+<li>
+<p><code>index.md</code> (文章主體)</p>
+</li>
+<li>
+<p><code>ef210-side.jpg</code> (該文章專用圖)</p>
+</li>
+<li>
+<p><strong>優點</strong>：刪除文章時，圖片會一併移除，不會產生孤兒檔案。</p>
+</li>
+</ul>
+<h4 id="2-全站通用資源-global-assets">2. 全站通用資源 (Global Assets)</h4>
+<p>如果是首頁按鈕背景、Logo 或多個頁面共用的裝飾圖，請存放在 <code>static</code> 目錄。</p>
+<ul>
+<li>
+<p><strong>路徑範例</strong>：<code>static/images/ui/</code></p>
+</li>
+<li>
+<p><strong>結構</strong>：</p>
+</li>
+<li>
+<p><code>comparison-hero.jpg</code> (首頁大按鈕背景)</p>
+</li>
+<li>
+<p><strong>引用路徑</strong>：在 CSS 或 HTML 中直接使用 <code>/images/ui/xxx.jpg</code>。</p>
+</li>
+</ul>
+<h4 id="3-命名原則-naming-convention">3. 命名原則 (Naming Convention)</h4>
+<ul>
+<li><strong>全小寫</strong>：避免大小寫造成的讀取錯誤（例如：使用 <code>kato-ef210.jpg</code> 而非 <code>Kato_EF210.JPG</code>）。</li>
+<li><strong>無空格</strong>：單字間以連字號 <code>-</code> 隔開。</li>
+<li><strong>有意義的描述</strong>：依照 <code>品牌-型號-視角.jpg</code> 命名，方便未來搜尋。</li>
+</ul>
+<h3 id="型式分頁管理規範">型式分頁管理規範</h3>
+<p>🛠️ 1. 建議的目錄結構
+將 comparison 變成一個大類別，裡面按「型號」分資料夾：</p>
+<p>content/
+└── comparison/
+├── _index.md             (型式專欄首頁，顯示所有型號列表)
+└── ef210/                (EF210 型號專區)
+├── _index.md         (設定標題為 &ldquo;EF210 專欄&rdquo;)
+├── kato-ef210.md     (KATO 版評測)
+├── tomix-ef210.md    (TOMIX 版評測)
+└── sanying-ef210.md  (三鶯重工版評測)</p>
+
+</content>
+
+
+
+<p>
+  
+</p>
+
+  </main>
+
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+<div style="text-align: left; font-size: 0.85rem; color: #666; margin-top: 20px; line-height: 1.6;">
+    <p>
+        <strong>影像與版權聲明：</strong><br>
+        • 本站文章中所使用之第三方圖片、官方商標（如 KATO, TOMIX, Micro Ace 等）及實車影像，其版權均屬原作者或原權利機構所有。<br>
+        • 本站引用之影像僅作為個人模型收藏紀錄、推廣交流及學術評論之引用，無任何商業用途或侵權意圖。<br>
+        • 站內由本人拍攝之模型照片，歡迎在標註來源之前提下非營利轉載。<br>
+        • 若有任何版權疑慮或認為引用不當，請聯繫告知，本人將立即配合移除相關內容。
+    </p>
+</div></footer>
+</body>
+
+</html>

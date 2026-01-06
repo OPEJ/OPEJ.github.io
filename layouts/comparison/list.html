@@ -1,18 +1,84 @@
 {{ define "main" }}
-<content>
-  {{ partial "breadcrumbs.html" . }}
+{{ partial "breadcrumbs.html" . }}
+<div class="comparison-container" style="max-width: 1100px; margin: 0 auto; padding: 0 20px 20px 20px;">
+  <h1 style="border-bottom: 2px solid #2c3e50; padding-bottom: 10px; margin-top: 10px;">{{ .Title }}</h1>
   
-  <h1>{{ .Title }}</h1>
-
-  <div class="comparison-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
-    {{ range .Pages }}
-      <div class="comp-card" style="border: 1px solid #ddd; padding: 15px; border-radius: 8px;">
-        <a href="{{ .Permalink }}">
-          <h3>{{ .Title }}</h3>
-        </a>
-        <p>{{ .Summary }}</p>
-      </div>
-    {{ end }}
+  <div class="page-content" style="margin: 20px 0; line-height: 1.8; color: #444;">
+    {{ .Content }}
   </div>
-</content>
+
+  <div class="comparison-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(max-content, max-content)); gap: 20px; justify-content: start; margin-top: 30px;">
+    
+    {{/* 1. 顯示子型號 (如果有) */}}
+    {{ range .Sections }}
+      <a href="{{ .Permalink }}" class="model-card">
+        <div class="model-accent"></div>
+        <div class="model-body">
+          <h3>{{ .Title }}</h3>
+        </div>
+      </a>
+    {{ end }}
+
+    {{/* 2. 顯示比較文章 (如 KATO D51) */}}
+    {{ range .RegularPages }}
+      <a href="{{ .Permalink }}" class="article-item">
+        <div class="article-body">
+          <h3>{{ .Title }}</h3>
+        </div>
+      </a>
+    {{ end }}
+
+  </div>
+</div>
+
+<style>
+  /* 色塊卡片設計 */
+  .model-card {
+    display: inline-flex;
+    background: #f8f9fa;
+    text-decoration: none !important;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.3s;
+    border: 1px solid #eee;
+    width: auto;
+    height: auto; 
+    align-self: start;
+  }
+  .model-accent { width: 8px; background: #2c3e50; } /* 側邊色塊 */
+  .model-body { padding: 10px; color: #2c3e50; }
+  .model-body h3 {  margin: 0; /* 4. 強制控制標題的上下外距 */
+    font-size: 1.1rem;  line-height: 1.2; display: inline-block; }
+  .category-label { font-size: 0.7rem; background: #e9ecef; padding: 2px 6px; border-radius: 4px; }
+  .model-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+  /* 文章卡片設計 */
+  .article-item {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 8px 15px; /* 調整內距讓比例更好看 */
+    border-radius: 6px;
+    text-decoration: none !important;
+    color: #333 !important;
+    transition: 0.3s;
+    /* 關鍵修改：變更為 flex 佈局以實現垂直置中 */
+    display: inline-flex;
+    flex-direction: column; /* 讓內容由上而下排 */
+    justify-content: center; /* 垂直置中（當有固定高度時有效） */
+    /* 寬度控制 */
+    width: auto;    /* 寬度隨文字長度縮放 */
+    height: auto;          /* 自動高度 */
+    }
+
+   .article-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;           /* 確保內層不撐開 */
+    }
+  .article-item h3 { margin: 0; font-size: 1.1rem; color: #2c3e50;display: inline-block; white-space: nowrap; }
+  .article-item p { font-size: 0.9rem; color: #666; margin: 0; }
+  .read-more { display: block; margin-top: 15px; font-weight: bold; color: #e67e22; font-size: 0.85rem; }
+  .article-item:hover { border-color: #e67e22; background: #fffcf9; }
+</style>
 {{ end }}

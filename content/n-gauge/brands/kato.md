@@ -11,11 +11,7 @@ draft: false
 {{< train_list brand="KATO" >}}
 
 <style>
-  /* 隱藏主題自帶的 Header (如果你的主題是用這些 ID) */
-  header, .header, #header-wrapper { 
-    display: none !important; 
-  }
-  
+
   /* 額外加強：讓返回連結看起來像個小按鈕 */
   a[href="/n-gauge/"] {
     display: inline-block;

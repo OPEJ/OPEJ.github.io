@@ -56,8 +56,3 @@ draft: false          # 記得檢查這裡是不是 false
   </a>
   </div>
 
-<style>
-  header, .header, #header-wrapper { 
-    display: none !important; 
-  }
-</style>

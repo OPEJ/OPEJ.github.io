@@ -24,10 +24,17 @@
 </head>
 
 <body>
-  <header>
-    {{- partial "header.html" . -}}
-  </header>
+  {{ if .IsHome }}
+    {{/* 只有首頁會載入 Header */}}
+    {{ partial "header.html" . }}
+  {{ else }}
+    {{/* 非首頁頁面：從根源移除 Header 並確保樣式隱藏 */}}
+    <style>
+      header, .header, #header-wrapper { display: none !important; }
+    </style>
+  {{ end }}
 
+  {{/* 這是主要的內容區塊，全站只應有一個 main */}}
   <main style="min-height: 70vh;">
     {{- block "main" . }}{{- end }}
   </main>

@@ -1,5 +1,5 @@
 ---
-title: "蒸汽機車收藏"
+title: "蒸汽機車"
 date: 2026-01-04
 draft: false
 ---

@@ -56,3 +56,64 @@ draft: false          # 記得檢查這裡是不是 false
   </a>
   </div>
 
+<br><br>
+
+<div class="special-nav">
+  <a href="/n-gauge/comparison/" class="big-nav-card comparison-bg">
+    <div class="overlay">
+      <span class="en-title">COMPARISON</span>
+      <span class="zh-title">型式專欄</span>
+    </div>
+  </a>
+</div>
+
+<style>
+  .special-nav {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .big-nav-card {
+    position: relative;
+    display: block;
+    height: 150px; /* 控制大按鈕的高度 */
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-size: cover;
+    background-position: center;
+    background-color: #2c3e50;
+    /* 這裡替換成你想要的背景圖 */
+    background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000'); 
+  }
+
+  .big-nav-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* 遮罩深淺 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white !important;
+  }
+
+  .en-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+  }
+
+  .zh-title {
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+</style>
+

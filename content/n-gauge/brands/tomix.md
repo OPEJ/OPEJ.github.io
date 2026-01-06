@@ -1,5 +1,5 @@
 ---
-title: "TOMIX 收藏清單"
+title: "TOMIX"
 date: 2026-01-04
 draft: false
 ---

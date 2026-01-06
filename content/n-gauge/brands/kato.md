@@ -1,5 +1,5 @@
 ---
-title: "KATO 收藏清單"
+title: "KATO"
 date: 2026-01-04
 draft: false
 ---

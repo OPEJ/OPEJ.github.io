@@ -1,5 +1,5 @@
 ---
-title: "三鶯重工藏清單"
+title: "三鶯重工"
 date: 2026-01-04
 draft: false
 ---

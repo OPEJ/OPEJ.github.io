@@ -22,7 +22,7 @@ Ctrl + / 會註解
 強制換行	行末「兩個空格」+ Enter
 大間隔換行	使用 <br> 或多個空行
 
-./hugo server -D 顯示預覽網頁指令
+./hugo server -D     顯示預覽網頁指令
 
 Source: Wikimedia Commons / Photo by [作者名]
 

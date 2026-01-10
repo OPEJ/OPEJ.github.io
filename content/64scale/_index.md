@@ -2,7 +2,6 @@
 title: "1/64 比例收藏"
 date: 2026-01-08
 draft: false
-layout: "index"
 ---
 
 ## 1/64 模型車收藏
@@ -81,11 +80,14 @@ layout: "index"
   <a href="./manufacturers/isuzu/" class="logo-card">
     <img src="/images/car_logo/isuzu.png" alt="Isuzu"><span>Isuzu</span>
   </a>
+  <a href="./manufacturers/mercedes-benz/" class="logo-card">
+    <img src="/images/car_logo/mercedes-benz.png"><span>Mercedes-Benz Trucks</span>
+  </a>
   <a href="./manufacturers/iveco/" class="logo-card">
     <img src="/images/car_logo/iveco.png" alt="Iveco"><span>Iveco</span>
   </a>
   <a href="./manufacturers/fuso/" class="logo-card">
-    <img src="/images/car_logo/mitsubishi-fuso.png" alt="Fuso"><span>三菱 Fuso</span>
+    <img src="/images/car_logo/mitsubishi-fuso.png" alt="Fuso"><span>Mitsubishi Fuso</span>
   </a>
   <a href="./manufacturers/scania/" class="logo-card">
     <img src="/images/car_logo/scania.png" alt="Scania"><span>Scania</span>
@@ -127,6 +129,11 @@ layout: "index"
 </div>
 
 <style>
+
+  /* 專門針對 Bear Blog 主題的列表隱藏 */
+  main ul {
+    display: none;
+  }
   .special-nav { margin-top: 20px; width: 100%; }
   .big-nav-card {
     position: relative; display: block; height: 150px; border-radius: 8px; overflow: hidden;

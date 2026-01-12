@@ -1,16 +1,16 @@
 ---
-title: "1/64 比例收藏"
+title: "1/64 收藏"
 date: 2026-01-08
 draft: false
 ---
 
 ## 1/64 模型車收藏
 
-這裡收錄了超過 300 輛的小車與商用車收藏。
-包含精緻賽車、超跑，以及大型運輸卡車與消防車系列。
+這裡記錄了目前我擁有的小車與商用車收藏。  
+包含各式  賽車、超跑，以及大型運輸卡車  與消防車系列。
 
-**依品牌分類：**
-
+**依品牌分類：**  
+(僅列出較大規模的品牌商)  
 <style>
   .category-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 20px; }
   .category-card { 
@@ -27,8 +27,8 @@ draft: false
     全部收藏清單</a>
   <a href="./64brands/mini-gt/" class="category-card">MINI GT</a>
   <a href="./64brands/tomytec/" class="category-card">Tomytec / TLV</a>
-  <a href="./brands/tarmac-works/" class="category-card">Tarmac Works</a>
-  <a href="./64brands/gdc/" class="category-card">GDC</a>
+  <a href="./64brands/tarmac-works/" class="category-card">Tarmac Works</a>
+  <a href="./64brands/gdc/" class="category-card" >GDC</a>
   <a href="./64brands/bbr/" class="category-card">BBR</a>
   <a href="./64brands/pop-race/" class="category-card">POP RACE</a>
   <a href="./64brands/sparky/" class="category-card">Sparky / Spark</a>

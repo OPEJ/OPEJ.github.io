@@ -1,0 +1,9 @@
+{{ define "main" }}
+<content>
+  {{ partial "breadcrumbs.html" . }}
+  <div class="page-content">
+    {{ .Content }}
+  </div>
+  {{/* 這裡完全不寫任何 range .Pages 的代碼，所以保證沒列表 */}}
+</content>
+{{ end }}   

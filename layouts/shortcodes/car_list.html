@@ -1,0 +1,65 @@
+{{ $brand := .Get "brand" }}
+{{/* 統一使用 assets/data/ 下的資源 */}}
+{{ $file := resources.Get "data/64_collection.csv" }}
+
+{{ if $file }}
+  <div class="car-grid">
+    {{/* 使用 transform.Unmarshal 處理 Resource CSV */}}
+    {{ $data := $file | transform.Unmarshal }}
+    
+    {{ range $index, $row := $data }}
+      {{ if ne $index 0 }} {{/* 跳過標頭 */}}
+        
+        {{ $row_brand   := index $row 1 }}
+        {{ $row_id      := index $row 2 }}
+        {{ $row_img     := index $row 3 }}
+        {{ $row_v_brand := index $row 4 }}
+        {{ $row_name    := index $row 6 }}
+
+        {{/* 篩選品牌 */}}
+        {{ if eq $row_brand $brand }}
+        <div class="car-card">
+          <div class="car-image-container">
+            {{ if $row_img }}
+              {{/* 假設圖片放在 static/images/cars/ */}}
+              <img src="/images/cars/{{ $row_img }}" alt="{{ $row_name }}" loading="lazy">
+            {{ else }}
+              <div class="no-image">No Image</div>
+            {{ end }}
+          </div>
+          <div class="car-info">
+            <span class="car-id">{{ $row_brand }} #{{ $row_id }}</span>
+            <p class="car-v-brand">{{ $row_v_brand }}</p>
+            <p class="car-name">{{ $row_name }}</p>
+          </div>
+        </div>
+        {{ end }}
+
+      {{ end }}
+    {{ end }}
+  </div>
+{{ else }}
+  <p style="color:red;">找不到 CSV 檔案：assets/data/64scale.csv</p>
+{{ end }}
+
+<style>
+  .car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+  }
+  .car-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    overflow: hidden;
+    transition: 0.2s;
+  }
+  .car-image-container { width: 100%; height: 120px; background: #eee; }
+  .car-image-container img { width: 100%; height: 100%; object-fit: contain; }
+  .car-info { padding: 8px; }
+  .car-id { font-size: 0.7rem; color: #cc0000; font-weight: bold; text-transform: uppercase; }
+  .car-v-brand { font-size: 0.75rem; color: #666; margin: 2px 0; }
+  .car-name { font-size: 0.85rem; font-weight: bold; margin: 0; line-height: 1.2; color: #333; }
+</style>

@@ -1,5 +1,5 @@
 ---
-title: "MINI GT 品牌館"
+title: "MINI GT"
 layout: "list"
 type: "cars"
 filter_type: "brand"    # 告訴模板我要按「品牌」過濾

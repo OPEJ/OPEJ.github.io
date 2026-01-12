@@ -25,13 +25,13 @@ draft: false
 <div class="category-grid">
   <a href="./all-collection/" class="category-card" style="background: #2c3e50; color: white;">
     全部收藏清單</a>
-  <a href="./brands/mini-gt/" class="category-card">MINI GT</a>
-  <a href="./brands/tomytec/" class="category-card">Tomytec / TLV</a>
+  <a href="./64brands/mini-gt/" class="category-card">MINI GT</a>
+  <a href="./64brands/tomytec/" class="category-card">Tomytec / TLV</a>
   <a href="./brands/tarmac-works/" class="category-card">Tarmac Works</a>
-  <a href="./brands/gdc/" class="category-card">GDC</a>
-  <a href="./brands/bbr/" class="category-card">BBR</a>
-  <a href="./brands/pop-race/" class="category-card">POP RACE</a>
-  <a href="./brands/sparky/" class="category-card">Sparky / Spark</a>
+  <a href="./64brands/gdc/" class="category-card">GDC</a>
+  <a href="./64brands/bbr/" class="category-card">BBR</a>
+  <a href="./64brands/pop-race/" class="category-card">POP RACE</a>
+  <a href="./64brands/sparky/" class="category-card">Sparky / Spark</a>
 </div>
 
 <br>

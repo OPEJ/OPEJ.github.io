@@ -1,28 +1,23 @@
 {{ $brand := .Get "brand" }}
-{{/* 統一使用 assets/data/ 下的資源 */}}
 {{ $file := resources.Get "data/64_collection.csv" }}
 
 {{ if $file }}
   <div class="car-grid">
-    {{/* 使用 transform.Unmarshal 處理 Resource CSV */}}
     {{ $data := $file | transform.Unmarshal }}
-    
     {{ range $index, $row := $data }}
-      {{ if ne $index 0 }} {{/* 跳過標頭 */}}
-        
+      {{ if ne $index 0 }}
         {{ $row_brand   := index $row 1 }}
         {{ $row_id      := index $row 2 }}
         {{ $row_img     := index $row 3 }}
         {{ $row_v_brand := index $row 4 }}
         {{ $row_name    := index $row 6 }}
 
-        {{/* 篩選品牌 */}}
         {{ if eq $row_brand $brand }}
         <div class="car-card">
-          <div class="car-image-container">
+          {{/* 點擊觸發放大函數 */}}
+          <div class="car-image-container" onclick="openLightbox('/images/cars/{{ $row_img }}', '{{ $row_name }}')">
             {{ if $row_img }}
-              {{/* 假設圖片放在 static/images/cars/ */}}
-              <img src="/images/cars/{{ $row_img }}" alt="{{ $row_name }}" loading="lazy">
+              <img src="/images/cars/{{ $row_img }}" alt="{{ $row_name }}" loading="lazy" style="cursor: zoom-in;">
             {{ else }}
               <div class="no-image">No Image</div>
             {{ end }}
@@ -34,32 +29,90 @@
           </div>
         </div>
         {{ end }}
-
       {{ end }}
     {{ end }}
   </div>
-{{ else }}
-  <p style="color:red;">找不到 CSV 檔案：assets/data/64scale.csv</p>
+
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close-btn">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div id="caption"></div>
+  </div>
+
 {{ end }}
 
+<script>
+function openLightbox(src, title) {
+  const lb = document.getElementById('lightbox');
+  lb.style.display = "flex";
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('caption').innerHTML = title;
+  document.body.style.overflow = "hidden"; // 點開時鎖定網頁捲軸
+}
+
+function closeLightbox() {
+  const lb = document.getElementById('lightbox');
+  lb.style.display = "none";
+  document.body.style.overflow = "auto"; // 關閉時還原捲軸
+}
+</script>
+
 <style>
-  .car-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 15px;
-    margin: 20px 0;
-  }
-  .car-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background: #fff;
-    overflow: hidden;
-    transition: 0.2s;
-  }
-  .car-image-container { width: 100%; height: 120px; background: #eee; }
+  /* 1. 基礎網格與卡片 */
+  .car-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; margin: 20px 0; }
+  .car-card { border: 1px solid #ddd; border-radius: 8px; background: #fff; overflow: hidden; transition: 0.2s; }
+  .car-image-container { width: 100%; aspect-ratio: 4 / 3; background: #fdfdfd; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 5px; cursor: pointer; }
   .car-image-container img { width: 100%; height: 100%; object-fit: contain; }
-  .car-info { padding: 8px; }
-  .car-id { font-size: 0.7rem; color: #cc0000; font-weight: bold; text-transform: uppercase; }
+  .car-info { padding: 8px; border-top: 1px solid #eee; }
+  .car-id { font-size: 0.7rem; color: #cc0000; font-weight: bold; }
   .car-v-brand { font-size: 0.75rem; color: #666; margin: 2px 0; }
   .car-name { font-size: 0.85rem; font-weight: bold; margin: 0; line-height: 1.2; color: #333; }
+
+  /* 2. 燈箱黑色背景：必須是全螢幕置中 */
+  .lightbox {
+    display: none; /* 由 JS 切換 */
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    width: 100%;  /* 填滿寬度 */
+    height: 100%; /* 填滿高度 */
+    background-color: rgba(0,0,0,0.9);
+    align-items: center;     /* 垂直置中 */
+    justify-content: center;  /* 水平置中 */
+    flex-direction: column;
+    backdrop-filter: blur(5px); /* 背景模糊 */
+  }
+
+  /* 3. 燈箱內的圖片：這才是限制尺寸的地方 */
+  .lightbox-content {
+    max-width: 90vw;   /* 寬度最大 90% 視窗 */
+    max-height: 80vh;  /* 高度最大 80% 視窗，留空間給文字 */
+    object-fit: contain;
+    box-shadow: 0 0 30px rgba(255,255,255,0.2); /* 讓圖片發光 */
+    border: 2px solid rgba(255,255,255,0.5); /* 淡淡的細邊框 */
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+  }
+
+  /* 4. 關閉按鈕與文字 */
+  #caption {
+    margin-top: 15px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-shadow: 2px 2px 4px #000;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 50px;
+    cursor: pointer;
+    line-height: 1;
+    transition: 0.2s;
+  }
+  .close-btn:hover { color: #cc0000; }
 </style>

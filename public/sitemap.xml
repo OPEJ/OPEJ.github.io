@@ -6,7 +6,7 @@
     <lastmod>2026-01-11T23:52:47+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/64scale/</loc>
-    <lastmod>2026-01-12T20:03:16+08:00</lastmod>
+    <lastmod>2026-01-12T20:49:13+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/n-gauge/comparison/d51/</loc>
     <lastmod>2026-01-11T23:52:47+08:00</lastmod>
@@ -56,22 +56,28 @@
     <loc>http://localhost:1313/readme/</loc>
     <lastmod>2026-01-11T23:52:47+08:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/64scale/64brands/bbr/</loc>
+    <lastmod>2026-01-12T20:42:31+08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/brands/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
+    <loc>http://localhost:1313/64scale/64brands/gdc/</loc>
+    <lastmod>2026-01-12T20:21:40+08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/64scale/64brands/mini-gt/</loc>
-    <lastmod>2026-01-12T20:15:38+08:00</lastmod>
+    <lastmod>2026-01-12T20:41:41+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/scales/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
   </url><url>
     <loc>http://localhost:1313/64scale/64brands/tarmac-works/</loc>
-    <lastmod>2026-01-12T20:18:25+08:00</lastmod>
+    <lastmod>2026-01-12T20:19:38+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/64scale/64brands/tomytec/</loc>
-    <lastmod>2026-01-12T20:15:42+08:00</lastmod>
+    <lastmod>2026-01-12T20:35:56+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/64scale/64brands/</loc>
     <lastmod>2026-01-12T19:47:13+08:00</lastmod>

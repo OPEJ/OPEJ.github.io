@@ -1,18 +1,17 @@
 ---
-title: "BBR"
+title: "POP RACE"
 # 確保這裡的 brand 跟下面 shortcode 填的一樣
-brand: "BBR"
+brand: "POP RACE"
 layout: "data-display"
 ---
 [← 返回分類首頁](/64scale/)
 
-## BBR
+## POP RACE
 
-BBR在大比例已有許多產品，1/64則是與Mini GT合作，由Mini GT代工開發。  
-有趣的是Mini GT與BBR產品線互不抵觸，而BBR本身售價略高於Mini GT，細節有部分提升。
+POP RACE算是拓意在海外的品牌，但跟拓意的產品不完全一樣。  
+POP RACE更多關於日系的產品線，拓意則是推出較多中系產品。
 
-
-{{< car_list brand="BBR" >}}
+{{< car_list brand="POP RACE" >}}
 
 <style>
     

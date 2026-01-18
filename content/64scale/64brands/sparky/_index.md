@@ -1,18 +1,17 @@
 ---
-title: "BBR"
+title: "Sparky"
 # 確保這裡的 brand 跟下面 shortcode 填的一樣
-brand: "BBR"
+brand: "Sparky"
 layout: "data-display"
 ---
 [← 返回分類首頁](/64scale/)
 
-## BBR
+## Sparky / Spark
 
-BBR在大比例已有許多產品，1/64則是與Mini GT合作，由Mini GT代工開發。  
-有趣的是Mini GT與BBR產品線互不抵觸，而BBR本身售價略高於Mini GT，細節有部分提升。
+Spark在大比例上算是大品牌了，在各類賽事都有許多產品。  
+但在1/64上的產品個人覺得不算旗艦，產品較不穩定，推出的時程資訊也較少。  
 
-
-{{< car_list brand="BBR" >}}
+{{< car_list brand="Sparky" >}}
 
 <style>
     

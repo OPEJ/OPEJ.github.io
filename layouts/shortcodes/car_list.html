@@ -1,35 +1,70 @@
-{{ $brand := .Get "brand" }}
+{{ $t_brand := .Get "brand" }}
+{{ $t_v_brand := .Get "v_brand" }}
 {{ $file := resources.Get "data/64_collection.csv" }}
 
 {{ if $file }}
-  <div class="car-grid">
-    {{ $data := $file | transform.Unmarshal }}
-    {{ range $index, $row := $data }}
-      {{ if ne $index 0 }}
-        {{ $row_brand   := index $row 1 }}
-        {{ $row_id      := index $row 2 }}
-        {{ $row_img     := index $row 3 }}
-        {{ $row_v_brand := index $row 4 }}
-        {{ $row_name    := index $row 6 }}
+  {{ $csv := $file | transform.Unmarshal }}
+  {{ $data := slice }}
 
-        {{ if eq $row_brand $brand }}
-        <div class="car-card">
-          {{/* 點擊觸發放大函數 */}}
-          <div class="car-image-container" onclick="openLightbox('/images/cars/{{ $row_img }}', '{{ $row_name }}')">
-            {{ if $row_img }}
-              <img src="/images/cars/{{ $row_img }}" alt="{{ $row_name }}" loading="lazy" style="cursor: zoom-in;">
-            {{ else }}
-              <div class="no-image">No Image</div>
-            {{ end }}
-          </div>
-          <div class="car-info">
-            <span class="car-id">{{ $row_brand }} #{{ $row_id }}</span>
-            <p class="car-v-brand">{{ $row_v_brand }}</p>
-            <p class="car-name">{{ $row_name }}</p>
-          </div>
-        </div>
-        {{ end }}
+  {{/* PART 1: 過濾資料並存入 slice (加入 trim 確保資料乾淨) */}}
+  {{ range $index, $row := $csv }}
+    {{ if ne $index 0 }}
+      {{/* 把抓出來的資料先刪掉頭尾空格 */}}
+      {{ $row_brand   := trim (index $row 1) " " }}
+      {{ $row_v_brand := trim (index $row 4) " " }}
+      {{ $row_type    := trim (index $row 5) " " }} {{/* 假設 type 在第 6 欄 */}}
+      
+      {{ $match := false }}
+      {{ if $t_brand }}
+        {{ if eq $row_brand $t_brand }}{{ $match = true }}{{ end }}
+      {{ else if $t_v_brand }}
+        {{ if eq $row_v_brand $t_v_brand }}{{ $match = true }}{{ end }}
       {{ end }}
+
+      {{ if $match }}
+        {{ $item := dict 
+          "brand"   $row_brand
+          "id"      (index $row 2)
+          "img"     (index $row 3)
+          "v_brand" $row_v_brand
+          "type"    $row_type
+          "name"    (index $row 6)
+        }}
+        {{ $data = $data | append $item }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{/* PART 2: 排序邏輯 */}}
+  {{ $sortedData := $data }}
+  
+  {{ if $t_brand }}
+    {{/* 品牌頁：先按車名(name)排，再按車商(v_brand)歸類 */}}
+    {{/* 這樣同一牌的 BMW 會排在一起，同一牌的 Honda 會排在一起 */}}
+    {{ $sortedData = sort (sort $data "type" "asc") "v_brand" "asc" }}
+  {{ else if $t_v_brand }}
+    {{/* 車商頁：先按車型(name)排，再按模型品牌(brand)歸類 */}}
+    {{/* 這樣同個模型牌子裡的 M3, M4 會按字母順序排好 */}}
+    {{ $sortedData = sort (sort $data "id" "asc") "type" "asc" }}
+  {{ end }}
+
+  {{/* PART 3: 渲染 HTML */}}
+  <div class="car-grid">
+    {{ range $sortedData }}
+    <div class="car-card">
+      <div class="car-image-container" onclick="openLightbox('/images/cars/{{ .img }}', '{{ .name }}')">
+        {{ if .img }}
+          <img src="/images/cars/{{ .img }}" alt="{{ .name }}" loading="lazy">
+        {{ else }}
+          <div class="no-image">No Image</div>
+        {{ end }}
+      </div>
+      <div class="car-info">
+        <span class="car-id">{{ .brand }} #{{ .id }}</span>
+        <p class="car-v-brand">{{ .v_brand }}</p>
+        <p class="car-name">{{ .name }}</p>
+      </div>
+    </div>
     {{ end }}
   </div>
 

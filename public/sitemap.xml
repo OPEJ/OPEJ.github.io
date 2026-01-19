@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/64scale/64_collection/</loc>
-    <lastmod>2026-01-11T23:52:47+08:00</lastmod>
+    <loc>http://localhost:1313/64scale/64-collection/</loc>
+    <lastmod>2026-01-19T20:49:54+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/64scale/</loc>
-    <lastmod>2026-01-18T21:37:10+08:00</lastmod>
+    <lastmod>2026-01-19T20:48:33+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/n-gauge/comparison/d51/</loc>
     <lastmod>2026-01-11T23:52:47+08:00</lastmod>
@@ -60,7 +60,7 @@
     <lastmod>2026-01-18T20:57:50+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/64scale/manufacturers/bmw/</loc>
-    <lastmod>2026-01-18T21:40:52+08:00</lastmod>
+    <lastmod>2026-01-18T22:23:11+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/brands/</loc>
   </url><url>

@@ -23,7 +23,7 @@ draft: false
 </style>
 
 <div class="category-grid">
-  <a href="./all-collection/" class="category-card" style="background: #2c3e50; color: white;">
+  <a href="./64-collection/" class="category-card" style="background: #2c3e50; color: white;">
     全部收藏清單</a>
   <a href="./64brands/mini-gt/" class="category-card">MINI GT</a>
   <a href="./64brands/tomytec/" class="category-card">Tomytec / TLV</a>

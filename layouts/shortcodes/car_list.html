@@ -1,3 +1,4 @@
+{{/* 1/64 專用 - 參考 N 規邏輯的穩定版 */}}
 {{ $t_brand := .Get "brand" }}
 {{ $t_v_brand := .Get "v_brand" }}
 {{ $file := resources.Get "data/64_collection.csv" }}
@@ -6,31 +7,22 @@
   {{ $csv := $file | transform.Unmarshal }}
   {{ $data := slice }}
 
-  {{/* PART 1: 過濾資料並存入 slice (加入 trim 確保資料乾淨) */}}
   {{ range $index, $row := $csv }}
-    {{ if ne $index 0 }}
-      {{/* 把抓出來的資料先刪掉頭尾空格 */}}
-      {{ $row_brand   := trim (index $row 1) " " }}
-      {{ $row_v_brand := trim (index $row 4) " " }}
-      {{ $row_type    := trim (index $row 5) " " }} {{/* 假設 type 在第 6 欄 */}}
-      
-      {{ $match := false }}
-      {{ if $t_brand }}
-        {{ if eq $row_brand $t_brand }}{{ $match = true }}{{ end }}
-      {{ else if $t_v_brand }}
-        {{ if eq $row_v_brand $t_v_brand }}{{ $match = true }}{{ end }}
-      {{ end }}
+    {{ if gt $index 0 }}
+      {{ if gt (len $row) 6 }} {{/* 確保這列至少有 7 欄資料 */}}
+        {{ $brand   := trim (index $row 1) " " }}
+        {{ $v_brand := trim (index $row 4) " " }}
+        {{ $type    := trim (index $row 5) " " }}
+        
+        {{/* 仿照 N 規的 or not 邏輯：沒傳參數就等於全部匹配 */}}
+        {{ $matchB  := or (not $t_brand) (eq $brand $t_brand) }}
+        {{ $matchVB := or (not $t_v_brand) (eq $v_brand $t_v_brand) }}
 
-      {{ if $match }}
-        {{ $item := dict 
-          "brand"   $row_brand
-          "id"      (index $row 2)
-          "img"     (index $row 3)
-          "v_brand" $row_v_brand
-          "type"    $row_type
-          "name"    (index $row 6)
-        }}
-        {{ $data = $data | append $item }}
+        {{/* 只有當「品牌」或「車商」其中一個匹配時才加入 (或是都沒傳時) */}}
+        {{ if and $matchB $matchVB }}
+          {{ $item := dict "brand" $brand "id" (index $row 2) "img" (index $row 3) "v_brand" $v_brand "type" $type "name" (index $row 6) }}
+          {{ $data = $data | append $item }}
+        {{ end }}
       {{ end }}
     {{ end }}
   {{ end }}

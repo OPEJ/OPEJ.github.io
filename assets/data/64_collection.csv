@@ -70,7 +70,7 @@ scale,brand,id,img,v_brand,type,name,build,box,seller,cost,give,show
 1/64,MINI GT,700,,BMW,M3 (G81),BMW M3 Competition Touring Toronto Red Metallic 吊卡,1,有盒,小賈蝦皮,480,,1
 1/64,MINI GT,776,,BMW,M3 (G81),BMW M3 M Performance Touring Alpine White 吊卡,1,有盒,小賈蝦皮,480,,1
 1/64,MINI GT,864,,BMW,M3 (G81),BMW M3 Competition Touring Brooklyn Grey,1,有盒,三創,370,,1
-1/64,MINI GT,897,,BMW,M3 (G81),BMW M3 M Performance Touring Mint Green,1,有盒,三創,370,,1
+1/64,MINI GT,897,mgt_897_0.jpg,BMW,M3 (G81),BMW M3 M Performance Touring Mint Green,1,有盒,三創,370,,1
 1/64,MINI GT,306,,BMW,M4 (F82),LB★WORKS BMW M4 Black W/ M Stripe,1,有盒,淘寶,870,,1
 1/64,MINI GT,319,,BMW,M4 (F82),LB★WORKS BMW M4 IMSA,1,有盒,蝦皮,1065,,1
 1/64,MINI GT,683,,BMW,M4 (G82),BMW M4 CSL Alpine White,1,有盒,小賈蝦皮,450,,1
@@ -97,7 +97,7 @@ scale,brand,id,img,v_brand,type,name,build,box,seller,cost,give,show
 1/64,MINI GT,802,,BMW,i7 (G70),BMW i7 xDrive60 Black Sapphire,1,有盒,MASH,370,,1
 1/64,MINI GT,952,,BMW,i7 (G70),BMW i7 xDrive60 Aventurin ,1,有盒,MASH,370,,1
 1/64,MINI GT,959,,BMW,i7 (G70),BMW i7 xDrive60 Alpine White / Black Sapphire,1,有盒,MASH,370,,1
-1/64,MINI GT,1111,,BMW,i7 (G70),BMW i7 xDrive60 Tanzanite Blue Metallic,1,有盒,MASH,370,,1
+1/64,MINI GT,1111,mgt_1111_0.jpg,BMW,i7 (G70),BMW i7 xDrive60 Tanzanite Blue Metallic,1,有盒,MASH,370,,1
 1/64,MINI GT,792,,BMW,7 Series (E38),BMW E38 750IL Aspen Silver Metallic,1,有盒,fb預購,370,,1
 1/64,MINI GT,998,,BMW,Z8 (E52),BMW Z8 Silver,2,有盒,小賈蝦皮,430,送,1
 1/64,MINI GT,1082,mgt_1082_0.jpg,BMW,Z8 (E52),BMW Z8 Alpina Alpine Blue,1,有盒,MASH,430,,1
@@ -201,9 +201,9 @@ scale,brand,id,img,v_brand,type,name,build,box,seller,cost,give,show
 1/64,MINI GT,1143,,Porsche,992 GT3 R,Porsche 911 GT3 R #77 AO Racing 2025 IMSA Petit Le Mans,2,有盒,小賈FB,510,,0
 1/64,MINI GT,1143,,Porsche,992 GT3 R,Porsche 911 GT3 R #77 AO Racing 2025 IMSA Petit Le Mans,3,有盒,tsaiFB,510,,0
 1/64,MINI GT,1143,,Porsche,992 GT3 R,Porsche 911 GT3 R #77 AO Racing 2025 IMSA Petit Le Mans 吊卡,1,有盒,tsaiFB,560,,0
-1/64,MINI GT,738,,Porsche,963,Porsche 963 #5 Porsche Penske Motorsport 2023 24 Hrs of Le Mans,1,套裝,三創,1600,,1
-1/64,MINI GT,739,,Porsche,963,Porsche 963 #6 Porsche Penske Motorsport 2023 24 Hrs of Le Mans,1,,,,,1
-1/64,MINI GT,740,,Porsche,963,Porsche 963 #75 Porsche Penske Motorsport 2023 24 Hrs of Le Mans,1,,,,,1
+1/64,MINI GT,738,mgt_738_0.jpg,Porsche,963,Porsche 963 #5 Porsche Penske Motorsport 2023 24 Hrs of Le Mans,1,套裝,三創,1600,,1
+1/64,MINI GT,739,mgt_739_0.jpg,Porsche,963,Porsche 963 #6 Porsche Penske Motorsport 2023 24 Hrs of Le Mans,1,,,,,1
+1/64,MINI GT,740,mgt_740_0.jpg,Porsche,963,Porsche 963 #75 Porsche Penske Motorsport 2023 24 Hrs of Le Mans,1,,,,,1
 1/64,MINI GT,740,,Porsche,963,Porsche 963 #75 Porsche Penske Motorsport 2023 24 Hrs of Le Mans,1,有盒,三創,510,,0
 1/64,MINI GT,740,,Porsche,963,Porsche 963 #75 Porsche Penske Motorsport 2023 24 Hrs of Le Mans 吊卡,1,有盒,三創,560,,0
 1/64,MINI GT,884,,Jaguar ,C-X75,Jaguar C-X75 Blue,1,有盒,MASH,370,,1
@@ -213,7 +213,7 @@ scale,brand,id,img,v_brand,type,name,build,box,seller,cost,give,show
 1/64,MINI GT,1070,,Jaguar ,C-X75,Jaguar C-X75 black,1,有盒,MASH,370,,1
 1/64,MINI GT,975,,Subaru,Impreza (GC/GF),Subaru Impreza WRC98 1998 Rally Monte-Carlo 3rd Place #3,1,有盒,小賈蝦皮,430,,1
 1/64,MINI GT,986,,Subaru,Impreza (GC/GF),Subaru Impreza  WRC99 1999 Rally #5 Australia Winner,1,有盒,小賈蝦皮,510,,1
-1/64,MINI GT,1078,,Subaru,Impreza (GC/GF),Subaru Impreza WRC99 #23 2000 Acropolis Rally,2,有盒,MASH,430,送,1
+1/64,MINI GT,1078,mgt_1078_0.jpg,Subaru,Impreza (GC/GF),Subaru Impreza WRC99 #23 2000 Acropolis Rally,2,有盒,MASH,430,送,1
 1/64,MINI GT,1173,,TOYOTA,GR86,GR86,1,有盒,tsaiFB,430,送,1
 1/64,MINI GT,899,,Volkswagen,ID. Buzz,"Volkswagen ID. Buzz Prototype ""Rainbow""",1,有盒,MASH,430,,1
 1/64,MINI GT,1159,,Volkswagen,,#1159 ,1,有盒,tsaiFB,430,,1

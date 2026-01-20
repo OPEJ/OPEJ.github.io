@@ -9,10 +9,20 @@
 
   {{ range $index, $row := $csv }}
     {{ if gt $index 0 }}
-      {{ if gt (len $row) 6 }} {{/* 確保這列至少有 7 欄資料 */}}
-        {{ $brand   := trim (index $row 1) " " }}
-        {{ $v_brand := trim (index $row 4) " " }}
-        {{ $type    := trim (index $row 5) " " }}
+      {{/* 1. 檢查欄位數量是否足夠 (0-7 共 8 欄) */}}
+      {{ if gt (len $row) 12 }}
+        
+        {{/* 2. 抓取顯示狀態並徹底除錯 (空格、換行) */}}
+        {{ $row_show := trim (index $row 12) " \n\r\t" }}
+
+        {{/* 3. 第一道大門：只有填 1 才准進入，填 0 或不填直接被擋掉 */}}
+        {{ if eq $row_show "1" }}
+          
+          {{/* 4. 進入第二道門：品牌與車商過濾 */}}
+          {{ $brand   := trim (index $row 1) " \n\r\t" }}
+          {{ $v_brand := trim (index $row 4) " \n\r\t" }}
+          {{ $type    := trim (index $row 5) " \n\r\t" }}
+          {{ $name    := index $row 6 }}
         
         {{/* 仿照 N 規的 or not 邏輯：沒傳參數就等於全部匹配 */}}
         {{ $matchB  := or (not $t_brand) (eq $brand $t_brand) }}
@@ -23,6 +33,7 @@
           {{ $item := dict "brand" $brand "id" (index $row 2) "img" (index $row 3) "v_brand" $v_brand "type" $type "name" (index $row 6) }}
           {{ $data = $data | append $item }}
         {{ end }}
+      {{ end }}{{/* end if show == "1" */}}
       {{ end }}
     {{ end }}
   {{ end }}

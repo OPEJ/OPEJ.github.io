@@ -6,7 +6,7 @@
     <lastmod>2026-01-19T20:55:52+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/64scale/</loc>
-    <lastmod>2026-01-19T20:48:33+08:00</lastmod>
+    <lastmod>2026-01-22T18:52:56+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/n-gauge/comparison/d51/</loc>
     <lastmod>2026-01-11T23:52:47+08:00</lastmod>
@@ -56,29 +56,92 @@
     <loc>http://localhost:1313/readme/</loc>
     <lastmod>2026-01-11T23:52:47+08:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/64scale/manufacturers/acura/</loc>
+    <lastmod>2026-01-22T18:33:59+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/64scale/manufacturers/alfa-romeo/</loc>
+    <lastmod>2026-01-22T18:33:51+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/64scale/manufacturers/aston-martin/</loc>
+    <lastmod>2026-01-22T18:33:37+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/64scale/manufacturers/audi/</loc>
+    <lastmod>2026-01-22T18:33:26+08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/64scale/64brands/bbr/</loc>
     <lastmod>2026-01-18T20:57:50+08:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/64scale/manufacturers/bentley/</loc>
+    <lastmod>2026-01-22T18:33:20+08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/64scale/manufacturers/bmw/</loc>
-    <lastmod>2026-01-18T22:23:11+08:00</lastmod>
+    <lastmod>2026-01-22T18:29:32+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/brands/</loc>
   </url><url>
+    <loc>http://localhost:1313/64scale/manufacturers/bugatti/</loc>
+    <lastmod>2026-01-22T18:33:12+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/64scale/manufacturers/cadillac/</loc>
+    <lastmod>2026-01-22T18:32:50+08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/64scale/manufacturers/chevrolet/</loc>
+    <lastmod>2026-01-22T18:33:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/64scale/manufacturers/ferrari/</loc>
+    <lastmod>2026-01-22T18:33:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/64scale/manufacturers/ford/</loc>
+    <lastmod>2026-01-22T18:51:04+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/64scale/64brands/gdc/</loc>
     <lastmod>2026-01-12T20:21:40+08:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/64scale/manufacturers/honda/</loc>
+    <lastmod>2026-01-22T18:34:30+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/64scale/manufacturers/jaguar/</loc>
+    <lastmod>2026-01-22T18:44:57+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/64scale/manufacturers/lamborghini/</loc>
+    <lastmod>2026-01-22T18:35:09+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/64scale/manufacturers/land-rover/</loc>
+    <lastmod>2026-01-22T18:36:12+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/64scale/manufacturers/maserati/</loc>
+    <lastmod>2026-01-22T18:39:44+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/64scale/manufacturers/mazda/</loc>
+    <lastmod>2026-01-22T18:38:24+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/64scale/manufacturers/mclaren/</loc>
+    <lastmod>2026-01-22T18:41:18+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/64scale/manufacturers/mercedes-benz/</loc>
+    <lastmod>2026-01-22T18:42:00+08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/64scale/64brands/mini-gt/</loc>
     <lastmod>2026-01-12T20:41:41+08:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/64scale/manufacturers/nissan/</loc>
+    <lastmod>2026-01-22T18:42:36+08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/64scale/64brands/pop-race/</loc>
     <lastmod>2026-01-18T21:57:06+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/64scale/manufacturers/porsche/</loc>
+    <lastmod>2026-01-22T18:43:11+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/scales/</loc>
   </url><url>
     <loc>http://localhost:1313/64scale/64brands/sparky/</loc>
     <lastmod>2026-01-18T21:14:41+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/64scale/manufacturers/subaru/</loc>
+    <lastmod>2026-01-22T18:48:32+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
   </url><url>
@@ -87,6 +150,12 @@
   </url><url>
     <loc>http://localhost:1313/64scale/64brands/tomytec/</loc>
     <lastmod>2026-01-12T20:35:56+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/64scale/manufacturers/toyota/</loc>
+    <lastmod>2026-01-22T18:49:15+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/64scale/manufacturers/volkswagen/</loc>
+    <lastmod>2026-01-22T18:50:57+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/64scale/64brands/</loc>
     <lastmod>2026-01-12T19:47:13+08:00</lastmod>

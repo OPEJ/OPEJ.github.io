@@ -30,7 +30,8 @@
 
         {{/* 只有當「品牌」或「車商」其中一個匹配時才加入 (或是都沒傳時) */}}
         {{ if and $matchB $matchVB }}
-          {{ $item := dict "brand" $brand "id" (index $row 2) "img" (index $row 3) "v_brand" $v_brand "type" $type "name" (index $row 6) }}
+          {{/* 在這裡的 dict 多加入 "rank" (index $row 13) */}}
+          {{ $item := dict "brand" $brand "id" (index $row 2) "img" (index $row 3) "v_brand" $v_brand "type" $type "name" (index $row 6) "rank" (index $row 13) }}
           {{ $data = $data | append $item }}
         {{ end }}
       {{ end }}{{/* end if show == "1" */}}
@@ -54,20 +55,21 @@
   {{/* PART 3: 渲染 HTML */}}
   <div class="car-grid">
     {{ range $sortedData }}
-    <div class="car-card">
-      <div class="car-image-container" onclick="openLightbox('/images/cars/{{ .img }}', '{{ .name }}')">
-        {{ if .img }}
-          <img src="/images/cars/{{ .img }}" alt="{{ .name }}" loading="lazy">
-        {{ else }}
-          <div class="no-image">No Image</div>
-        {{ end }}
+      {{/* 根據 .rank 加上不同的 class，這裡要合併在一起 */}}
+      <div class="car-card {{ if eq .rank "3" }}rank-gold{{ else if eq .rank "2" }}rank-silver{{ end }}">
+        <div class="car-image-container" onclick="openLightbox('/images/cars/{{ .img }}', '{{ .name }}')">
+          {{ if .img }}
+            <img src="/images/cars/{{ .img }}" alt="{{ .name }}" loading="lazy">
+          {{ else }}
+            <div class="no-image">No Image</div>
+          {{ end }}
+        </div>
+        <div class="car-info">
+          <span class="car-id">{{ .brand }} #{{ .id }}</span>
+          <p class="car-v-brand">{{ .v_brand }}</p>
+          <p class="car-name">{{ .name }}</p>
+        </div>
       </div>
-      <div class="car-info">
-        <span class="car-id">{{ .brand }} #{{ .id }}</span>
-        <p class="car-v-brand">{{ .v_brand }}</p>
-        <p class="car-name">{{ .name }}</p>
-      </div>
-    </div>
     {{ end }}
   </div>
 
@@ -153,4 +155,46 @@ function closeLightbox() {
     transition: 0.2s;
   }
   .close-btn:hover { color: #cc0000; }
+
+  /* --- 層級特效：金框與銀框 --- */
+  
+  /* 金框 (Rank 3) */
+  .rank-gold {
+    border: 2px solid #ffd700 !important;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); /* 稍微增強光暈 */
+    position: relative;
+    background: linear-gradient(145deg, #fffdf2, #fff);
+  }
+
+  /* 銀框 (Rank 2) - 已增強金屬感與亮度 */
+  .rank-silver {
+    border: 2px solid #C0C0C0 !important; /* 改用更亮的金屬銀 */
+    box-shadow: 0 0 15px rgba(192, 192, 192, 0.7); /* 更強的銀色發光 */
+    position: relative; /* 重要！一定要有這個，閃光才不會跑掉 */
+    background: linear-gradient(145deg, #e6e6e6, #ffffff); /* 更明顯的金屬漸層 */
+  }
+
+  /* 閃光動畫通用設定 (金銀共用) */
+  /* 這裡同時選取了 .rank-gold 和 .rank-silver 的 before 偽元素 */
+  .rank-gold::before,
+  .rank-silver::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    /* 閃光條：白色透明漸層 */
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transform: rotate(45deg);
+    animation: shine-effect 3s cubic-bezier(0.4, 0.0, 0.2, 1) infinite; /* 加快一點速度並調整曲線，更有質感 */
+    pointer-events: none; /* 確保滑鼠還能點到下面的卡片 */
+  }
+
+  /* 閃光動畫關鍵影格 */
+  @keyframes shine-effect {
+    0% { left: -150%; top: -150%; opacity: 0; }
+    30% { opacity: 1; }
+    100% { left: 150%; top: 150%; opacity: 0; }
+  }
 </style>

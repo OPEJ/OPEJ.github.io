@@ -59,7 +59,9 @@ draft: false
   <a href="./manufacturers/ferrari/" class="logo-card"><img src="/images/car_logo/ferrari.png"><span>Ferrari</span></a>
   <a href="./manufacturers/ford/" class="logo-card"><img src="/images/car_logo/ford.png"><span>Ford</span></a>
   <a href="./manufacturers/honda/" class="logo-card"><img src="/images/car_logo/honda.png"><span>Honda</span></a>
+  <a href="./manufacturers/jaguar/" class="logo-card"><img src="/images/car_logo/jaguar.png"><span>Jaguar</span></a>
   <a href="./manufacturers/lamborghini/" class="logo-card"><img src="/images/car_logo/lamborghini.png"><span>Lamborghini</span></a>
+  <a href="./manufacturers/land-rover/" class="logo-card"><img src="/images/car_logo/land-rover.png"><span>Land Rover</span></a>
   <a href="./manufacturers/maserati/" class="logo-card"><img src="/images/car_logo/maserati.png"><span>Maserati</span></a>
   <a href="./manufacturers/mazda/" class="logo-card"><img src="/images/car_logo/mazda.png"><span>Mazda</span></a>
   <a href="./manufacturers/mclaren/" class="logo-card"><img src="/images/car_logo/mclaren.png"><span>McLaren</span></a>
@@ -68,7 +70,7 @@ draft: false
   <a href="./manufacturers/porsche/" class="logo-card"><img src="/images/car_logo/porsche.png"><span>Porsche</span></a>
   <a href="./manufacturers/subaru/" class="logo-card"><img src="/images/car_logo/subaru.png"><span>Subaru</span></a>
   <a href="./manufacturers/toyota/" class="logo-card"><img src="/images/car_logo/toyota.png"><span>Toyota</span></a>
-  <a href="./manufacturers/volkswagen/" class="logo-card"><img src="/images/car_logo/volkswagen.png"><span>VW</span></a>
+  <a href="./manufacturers/volkswagen/" class="logo-card"><img src="/images/car_logo/volkswagen.png"><span>Volkswagen</span></a>
 </div>
 
 <br>

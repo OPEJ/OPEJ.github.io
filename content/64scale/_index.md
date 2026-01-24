@@ -82,20 +82,20 @@ draft: false
   <a href="./manufacturers/isuzu/" class="logo-card">
     <img src="/images/car_logo/isuzu.png" alt="Isuzu"><span>Isuzu</span>
   </a>
-  <a href="./manufacturers/mercedes-benz/" class="logo-card">
-    <img src="/images/car_logo/mercedes-benz.png"><span>Mercedes-Benz Trucks</span>
+  <a href="./manufacturers/mercedes-benz-trucks/" class="logo-card">
+    <img src="/images/car_logo/mercedes-benz.png" alt="Mercedes-Benz Trucks"><span>Mercedes-Benz Trucks</span>
   </a>
   <a href="./manufacturers/iveco/" class="logo-card">
     <img src="/images/car_logo/iveco.png" alt="Iveco"><span>Iveco</span>
   </a>
-  <a href="./manufacturers/fuso/" class="logo-card">
+  <a href="./manufacturers/mitsubishi-fuso/" class="logo-card">
     <img src="/images/car_logo/mitsubishi-fuso.png" alt="Fuso"><span>Mitsubishi Fuso</span>
   </a>
   <a href="./manufacturers/scania/" class="logo-card">
     <img src="/images/car_logo/scania.png" alt="Scania"><span>Scania</span>
   </a>
-  <a href="./manufacturers/volvo/" class="logo-card">
-    <img src="/images/car_logo/volvo.png" alt="Volvo"><span>Volvo</span>
+  <a href="./manufacturers/volvo-trucks/" class="logo-card">
+    <img src="/images/car_logo/volvo.png" alt="Volvo"><span>Volvo Trucks</span>
   </a>
   <a href="./manufacturers/ud/" class="logo-card">
     <img src="/images/car_logo/ud.png" alt="UD"><span>UD Trucks</span>

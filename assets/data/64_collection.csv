@@ -171,7 +171,7 @@ scale,brand,id,img,v_brand,type,name,build,box,seller,cost,give,show,rank
 1/64,MINI GT,1124,mgt_1124_0.jpg,Nissan,GT-R (R35),LB-Silhouette WORKS GT NISSAN 35GT-RR Ver.2 Blue,1,有盒,MASH,430,,1,1
 1/64,MINI GT,618,,Nissan,SILVIA (S15),Nissan LB-Super Silhouette S15 SILVIA #23 2022 Goodwood Festival of Speed,1,有盒,蝦皮,610,,1,1
 1/64,MINI GT,823,,Nissan,SILVIA (S15),Nissan LB-Super Silhouette S15 SILVIA #555 V2 2024 Formula Drift Japan,1,有盒,MASH,,,1,1
-1/64,MINI GT,858,,Nissan,SILVIA (S15),Nissan LB-Super Silhouette S15 SILVIA LBWK 2024 Fausto Racing,1,有盒,MASH,,,1,1
+1/64,MINI GT,858,mgt_858_0.jpg,Nissan,SILVIA (S15),Nissan LB-Super Silhouette S15 SILVIA LBWK 2024 Fausto Racing,1,有盒,MASH,,,1,1
 1/64,MINI GT,1185,,Nissan,SILVIA (S15), Nissan LB-Super Silhouette S15 SILVIA,1,有盒,tsaiFB,550,,1,1
 1/64,MINI GT,336,mgt_336_0.jpg,Nissan,GT-R NISMO GT3,Nissan GT-R NISMO GT3 2018 Test Car,1,有盒,代購幫,750,,1,1
 1/64,MINI GT,593,,Nissan,GT-R NISMO GT3,Nissan GT-R NISMO GT3 #23 KCMG 2018 FIA GT World Cup Macau,1,有盒,MASH,430,,1,1
@@ -228,8 +228,8 @@ scale,brand,id,img,v_brand,type,name,build,box,seller,cost,give,show,rank
 1/64,Model1,,,三菱ふそう,Fuso The Great (前期型),Fuso The Great FP-R 前期(圓燈板) 1986 白,1,有盒,淘寶,1000,,1,1
 1/64,Masterpiece,,,Scania,,01 SCDF Scania pump ladder,1,有盒,淘寶,1400,,1,1
 1/64,Masterpiece,,,Scania,,01 SCDF Scania pump ladder SP,1,有盒,淘寶,1400,,1,1
-1/64,Masterpiece,,,Scania,,61 SCDF Scania combined platform ladder #111(中央消防局),2,有盒,淘寶,2685,送1,1,1
-1/64,Masterpiece,,,Scania,,61 SCDF Scania combined platform ladder #221(樟宜消防局),1,有盒,淘寶,2732,,1,1
+1/64,Masterpiece,CPL61,,Scania,P320,61 SCDF Scania combined platform ladder #111(中央消防局),2,有盒,淘寶,2685,送1,1,1
+1/64,Masterpiece,CPL61,mp_61B_0.jpg,Scania,P320,61 SCDF Scania combined platform ladder #221(樟宜消防局),1,有盒,淘寶,2732,,1,1
 1/64,MASDI,SCN1000,,Scania,P420,Scania P420 L32云梯消防车,1,有盒,海陸淘寶,1400,,1,1
 1/64,MASDI,SCN1103,,Scania,770S,Scania 770S 6x4 (藍),2,有盒,海陸淘寶,800,,1,1
 1/64,MASDI,,,Scania,R770,Scania 770S 6x4 (白),1,有盒,tsaiFB,850,,1,1
@@ -255,10 +255,10 @@ scale,brand,id,img,v_brand,type,name,build,box,seller,cost,give,show,rank
 1/64,Sparky,,,Mercedes-Benz,AMG GT3 Evo,Goodsmile GSC 初音未來 Mercedes-AMG GT3 Evo 2025 Presentation,2,有盒,露天,760,,1,1
 1/64,Sparky,,,Mercedes-Benz,AMG GT3 Evo,Good Smile 初音未來 Mercedes-AMG GT3 Evo #00 2025 SPA24H Ver.,2,有盒,蝦皮,750,,1,1
 1/64,Sparky,18,spk_18_0.jpg,Porsche,Porsche 911 GT1,Porsche 911 GT1 White,1,有盒,淘寶,420,,1,1
-1/64,Sparky,,,Porsche,Porsche 911 GT1,Porsche 911 GT1 1996 24h Le man #25,1,有盒,淘寶,400,,1,1
-1/64,Sparky,,,Porsche,Porsche 911 GT1,Porsche 911 GT1 1996 24h Le man #26,,,淘寶,400,,1,1
-1/64,Sparky,,,Porsche,Porsche 911 GT1,Porsche 911 GT1 1996 Blue Coral #5,1,有盒,淘寶,400,,1,1
-1/64,Sparky,,,Porsche,Porsche 911 GT1,Porsche 911 GT1 1997 ROHR Racing #01,,,淘寶,400,,1,1
+1/64,Sparky,13,spk_13A_0.jpg,Porsche,Porsche 911 GT1,Porsche 911 GT1 1996 24h Le man #25,1,有盒,淘寶,400,,1,1
+1/64,Sparky,13,spk_13B_0.jpg,Porsche,Porsche 911 GT1,Porsche 911 GT1 1996 24h Le man #26,,,淘寶,400,,1,1
+1/64,Sparky,17,spk_17A_0.jpg,Porsche,Porsche 911 GT1,Porsche 911 GT1 1996 Blue Coral #5,1,有盒,淘寶,400,,1,1
+1/64,Sparky,17,spk_17B_0.jpg,Porsche,Porsche 911 GT1,Porsche 911 GT1 1997 ROHR Racing #01,,,淘寶,400,,1,1
 1/64,Sparky,,,Porsche,,Porsche 911 RSR No.56 PROJECT 1 AO Le Mans 24H 2023 ,1,有盒,淘寶,522,,1,1
 1/64,Sparky,20,spk_20_0.jpg,Porsche,Porsche 911 GT1 Evo,Porsche 911 GT1 Evo Sliver,1,有盒,MASH,520,,1,1
 1/64,Sparky,19,spk_19_0.jpg,Porsche,Porsche 911 GT1 Evo,"Porsche 911 GT1 Evo 2001 Daytona 24hr ""Havoline"" #76 ",1,有盒,淘寶,420,,1,1
